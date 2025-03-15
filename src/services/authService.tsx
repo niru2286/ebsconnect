@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://your-api.com"; // Replace with your backend API
+const API_URL = "http://172.18.18.212/api"; // Replace with your backend API
 
 // Save token in localStorage
 export const setToken = (token: string) => {
@@ -25,9 +25,9 @@ export const isAuthenticated = () => {
 
 
 // Login function
-export const login = async (username: string, password: string) => {
+export const login = async (userId: string, password: string) => {
   try {
-    const response = await axios.post(`${API_URL}/login`, { username, password });
+    const response = await axios.post(`${API_URL}/auth/login`, { userId, password });
     setToken(response.data.token);
     return true;
   } catch (error) {
