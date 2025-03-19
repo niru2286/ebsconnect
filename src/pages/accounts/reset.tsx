@@ -21,6 +21,10 @@ const Reset: React.FC = () => {
     }
   };
 
+  const fields = [
+    {name: "name", label: "Name", type: "input",  rules: [{ required: true, message: "Name is required" }]}
+  ];
+
   return (
     <Card title="Reset Password" style={{ maxWidth: 400, margin: "50px auto" }}>
       <Form layout="vertical" onFinish={handleReset}>
