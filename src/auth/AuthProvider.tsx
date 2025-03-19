@@ -17,6 +17,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   }, []);
 
   const loginUser = async (username: string, password: string) => {
+
     const success = await login(username, password);
     if (success) {
       setIsLoggedIn(true);

@@ -10,7 +10,7 @@ const Login: React.FC = () => {
 
   const handleLogin = async (values: { username: string; password: string }) => {
     setLoading(true);
-    const success = await auth?.loginUser(values.username, values.password);
+    const success = await auth?.loginUser(values.username, values.password); 
     setLoading(false);
 
     if (success) {
@@ -34,6 +34,9 @@ const Login: React.FC = () => {
           <Button type="primary" htmlType="submit" loading={loading} block>
             Login
           </Button>
+        </Form.Item>
+        <Form.Item>
+          <label>Forgot your password? Click Here</label>
         </Form.Item>
       </Form>
     </Card>

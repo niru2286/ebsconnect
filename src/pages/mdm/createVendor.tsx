@@ -95,7 +95,7 @@ const CreateVendor: React.FC = () => {
                         <Select onChange={(value) => handleChange(field.name, value)}>
                           {(dropdownOptions[field.name] || field.options || []).map((option) => (
                             <Option key={option} value={option}>
-                              {option}
+                              {option} 
                             </Option>
                           ))}
                         </Select>
