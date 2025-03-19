@@ -8,13 +8,30 @@ const { Option } = Select;
 
 // 🔹 Define fields with grouping and validation
 const fields = [
-  { name: "name", label: "Name", type: "input",  rules: [{ required: true, message: "Name is required" }] },
-  { name: "email", label: "Email", type: "input", rules: [{ required: true, type: "email", message: "Enter a valid email" }] },
-  { name: "role", label: "Role", type: "select", options: ["Admin", "User"],  rules: [{ required: true, message: "Select a role" }] },
-  { name: "department", label: "Department", type: "select", isDependent: true, rules: [{ required: true, message: "Select a department" }] },
-  { name: "state", label: "State", type: "select", options: ["NY", "CA"], group: "Location Details", rules: [{ required: true, message: "Select a state" }] },
-  { name: "city", label: "City", type: "select", isDependent: true, group: "Location Details", rules: [{ required: true, message: "Select a city" }] },
+  // Basic Details
+  { name: "PartyName", label: "Party Name", type: "input", group: "Basic Details", rules: [{ required: true, message: "Name is required" }] },
+  { name: "Address", label: "Address", type: "input", group: "Basic Details", rules: [{ required: true, message: "Address is required" }] },
+  { name: "City", label: "City", type: "input", group: "Basic Details", rules: [{ required: true, message: "City is required" }] },
+  { name: "State", label: "State", type: "input", group: "Basic Details", rules: [{ required: true, message: "State is required" }] },
+  { name: "Pincode", label: "Pincode", type: "input", group: "Basic Details", rules: [{ required: true, message: "Pincode is required" }] },
+  { name: "ContactNo", label: "Contact Number", type: "input", group: "Basic Details", rules: [{ required: true, pattern: /^[0-9]{10}$/, message: "Enter a valid contact number" }] },
+  { name: "Email", label: "Email ID", type: "input", group: "Basic Details", rules: [{ required: true, type: "email", message: "Enter a valid email" }] },
+  { name: "VendorType", label: "Vendor Type", type: "select", options: ["General", "Contractor", "Sub-Contractor"], group: "Basic Details", rules: [{ required: true, message: "Select a vendor type" }] },
+  { name: "Pan", label: "PAN", type: "input", group: "Basic Details", rules: [{ required: true, message: "Enter PAN" }] },
+  { name: "GST", label: "GSTIN", type: "input", group: "Basic Details", rules: [{ required: true, message: "Enter GSTIN" }] },
+
+  // MSME Details
+  { name: "MSME", label: "MSME ?", type: "select", options: ["Yes", "No"], group: "MSME Details", rules: [{ required: true, message: "Select MSME status" }] },
+  { name: "MSMECategory", label: "MSME Category", type: "select", options: ["Medium", "Micro", "Small"], group: "MSME Details" },
+  { name: "MSMEReg", label: "MSME Registration No", type: "input", group: "MSME Details",  },
+
+  // Bank Details
+  { name: "BankName", label: "Bank Name", type: "input", group: "Bank Details", rules: [{ required: true, message: "Enter bank name" }] },
+  { name: "BranchName", label: "Branch Name", type: "input", group: "Bank Details", rules: [{ required: true, message: "Enter branch name" }] },
+  { name: "IFSCCode", label: "IFSC Code", type: "input", group: "Bank Details", rules: [{ required: true, message: "Enter IFSC code" }] },
+  { name: "BankAc", label: "Bank A/c", type: "input", group: "Bank Details", rules: [{ required: true, message: "Enter bank account number" }] }
 ];
+
 
 // 🔹 Define dependencies for dropdowns
 const dependenciesConfig = {

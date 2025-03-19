@@ -24,12 +24,12 @@ const menuData = [
     icon: <UserOutlined />,
     children: [
       {
-        path: "/users/list",
-        name: "User List",
+        path: "/vendors/new",
+        name: "New Vendor",
       },
       {
-        path: "/users/roles",
-        name: "User Roles",
+        path: "/vendors/list",
+        name: "Vendor List",
       },
     ],
   },
@@ -81,8 +81,8 @@ const AdminLayout: React.FC = () => {
   return (
     <ConfigProvider locale={enUS}   >
       <ProLayout
-        title="TEESL"
-        navTheme="light"
+        title="TEECL"
+        navTheme="light"        
         logo="https://preview.tabler.io/static/logo.svg"
         style={{ backgroundColor: "#001009" }}
         menuItemRender={(item, dom) => <Link to={item.path}>{dom}</Link>}

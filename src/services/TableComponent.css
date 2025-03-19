@@ -1,0 +1,61 @@
+/* Table Container */
+.table-container {
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Table Title */
+  .table-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Table Controls (Search & Export) */
+  .table-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  /* Search Input */
+  .search-input {
+    width: 250px;
+  }
+  
+  /* Custom Table Styling */
+  .custom-table .ant-table {
+    font-size: 12px;
+  }
+  
+  /* Table Header Styling */
+  .custom-table .ant-table-thead > tr > th {
+    background-color: #878ab7 !important;
+    color: #ffffff !important;
+    font-weight: bold;    
+    padding: 8px !important;
+    font-size: 13px;
+  }
+
+  .custom-table .ant-table-tbody > tr > td {    
+    font-size: 12px;
+  }
+  
+  /* Table Row Hover Effect */
+  .custom-table .ant-table-tbody > tr:hover {
+    background-color: #e9f5ff !important;
+  }
+  
+  /* Table Cell Padding */
+  .custom-table .ant-table-cell {
+    padding: 6px !important;
+  }
+  
+  /* Smaller Pagination */
+  .custom-table .ant-pagination {
+    font-size: 12px;
+  }
+  

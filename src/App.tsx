@@ -8,6 +8,7 @@ import { AuthProvider } from "./auth/AuthProvider";
 import Login from "./pages/accounts/login";
 import ProtectedRoute from "./auth/ProtectedRoute";
 import CreateVendor from "./pages/mdm/createVendor";
+import ListVendors from "./pages/mdm/listVendor";
 
 console.log("App.tsx is rendering...");
 
@@ -22,7 +23,7 @@ const App: React.FC = () => {
               <Route index element={<Home />} />
               <Route path="vendors/new" element={<CreateVendor />} />
               <Route path="users/list" element={<Users />} />
-              <Route path="users/roles" element={<Home />} />            
+              <Route path="vendors/list" element={<ListVendors />} />            
             </Route>
           {/* </Route> */}
         </Routes>
